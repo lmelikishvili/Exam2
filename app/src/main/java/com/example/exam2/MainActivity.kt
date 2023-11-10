@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         var unsortedAnagrams: MutableList<String> = arrayListOf()
 
         binding.btnSave.setOnClickListener(){
-
             unsortedAnagrams = binding.editTextText.text.toString().split(" ").toMutableList()
             Toast.makeText(this, "Words saved!!", Toast.LENGTH_LONG).show()
         }
@@ -23,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnOutput.setOnClickListener(){
             binding.textView.text = "Anagrams count: ${sortAnagrams(unsortedAnagrams).count().toString()}"
         }
-
-
     }
 
 
